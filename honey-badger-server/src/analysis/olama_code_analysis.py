@@ -1,21 +1,23 @@
 import sys
 import json
-import ollama
 import re
 import os
 import traceback
 import datetime
+import requests
 
-OLLAMA_HOST = os.getenv('OLLAMA_HOST', 'http://127.0.0.1:11434')
-OLLAMA_MODEL = os.getenv('OLLAMA_MODEL', 'llama3:latest')
-OLLAMA_CLIENT = ollama.Client(host=OLLAMA_HOST)
+OPENROUTER_API_KEY = os.getenv('OPENROUTER_API_KEY', '').strip()
+OPENROUTER_MODEL = os.getenv('OPENROUTER_MODEL', 'openrouter/owl-alpha').strip()
+OPENROUTER_BASE_URL = os.getenv('OPENROUTER_BASE_URL', 'https://openrouter.ai/api/v1').rstrip('/')
+OPENROUTER_SITE_URL = os.getenv('OPENROUTER_SITE_URL', '').strip()
+OPENROUTER_APP_NAME = os.getenv('OPENROUTER_APP_NAME', 'HoneyBadger').strip()
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-LOG_FILE = os.path.join(SCRIPT_DIR, 'ollama_debug.txt')
+LOG_FILE = os.path.join(SCRIPT_DIR, 'openrouter_debug.txt')
 
 def debug(msg: str):
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    log_msg = f"[{timestamp}] [OLLAMA-DEBUG] {msg}"
+    log_msg = f"[{timestamp}] [OPENROUTER-DEBUG] {msg}"
     
     print(log_msg, file=sys.stderr, flush=True)
     
@@ -23,7 +25,7 @@ def debug(msg: str):
         with open(LOG_FILE, 'a', encoding='utf-8') as f:
             f.write(log_msg + "\n")
     except Exception as e:
-        print(f"[{timestamp}] [OLLAMA-DEBUG-ERROR] Failed to write to debug log: {e}", file=sys.stderr, flush=True)
+        print(f"[{timestamp}] [OPENROUTER-DEBUG-ERROR] Failed to write to debug log: {e}", file=sys.stderr, flush=True)
 
 def strip_comments(code: str) -> str:
     pattern = r'/\*[\s\S]*?\*/|//.*'
@@ -48,28 +50,51 @@ def analyze_chunk(code_chunk: str, filename: str) -> dict:
       "vulnerabilities": [{"type": string, "description": string, "snippet": string}]
     }"""
 
-    debug(f"Sending to Ollama: {filename} (code size: {len(code_chunk)} chars)")
+    debug(f"Sending to OpenRouter: {filename} (code size: {len(code_chunk)} chars)")
     
     try:
-        response = OLLAMA_CLIENT.chat(
-            model=OLLAMA_MODEL,
-            messages=[
+        if not OPENROUTER_API_KEY:
+            raise RuntimeError('Missing OPENROUTER_API_KEY environment variable')
+
+        headers = {
+            'Authorization': f'Bearer {OPENROUTER_API_KEY}',
+            'Content-Type': 'application/json',
+        }
+        if OPENROUTER_SITE_URL:
+            headers['HTTP-Referer'] = OPENROUTER_SITE_URL
+        if OPENROUTER_APP_NAME:
+            headers['X-Title'] = OPENROUTER_APP_NAME
+
+        payload = {
+            'model': OPENROUTER_MODEL,
+            'messages': [
                 {'role': 'system', 'content': system_prompt},
                 {'role': 'user', 'content': f'File: {filename}\n<UNTRUSTED_CODE>\n{code_chunk}\n</UNTRUSTED_CODE>'}
             ],
-            format='json',
-            options={'temperature': 0.0}
+            'temperature': 0.0,
+            'response_format': {'type': 'json_object'},
+        }
+
+        response = requests.post(
+            f'{OPENROUTER_BASE_URL}/chat/completions',
+            headers=headers,
+            json=payload,
+            timeout=120,
         )
-        debug(f"Ollama responded for file: {filename}")
-        return json.loads(response['message']['content'])
+        response.raise_for_status()
+        body = response.json()
+        content = body['choices'][0]['message']['content']
+        debug(f"OpenRouter responded for file: {filename}")
+        return json.loads(content)
     except Exception as e:
-        debug(f"Ollama error for file {filename}: {str(e)}")
+        debug(f"OpenRouter error for file {filename}: {str(e)}")
         debug(traceback.format_exc())
         return {"isSafe": False, "riskScore": 5, "summary": f"LLM Error: {str(e)}", "vulnerabilities": []}
 
 def main():
     debug("--- SCRIPT START ---")
-    debug(f"Host: {OLLAMA_HOST}, Model: {OLLAMA_MODEL}")
+    debug(f"Base URL: {OPENROUTER_BASE_URL}, Model: {OPENROUTER_MODEL}")
+    debug(f"API key present: {'yes' if bool(OPENROUTER_API_KEY) else 'no'}")
 
     input_data = sys.stdin.read()
     debug(f"Read {len(input_data)} characters from stdin")
