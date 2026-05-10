@@ -1,6 +1,6 @@
 """
 How to run:
-1. Prepare data.csv (example: "Age: 1 days, Updated: 0 days ago, Maint: 1, Version: 99.0.0", 1).
+1. Prepare data.csv (example: "Age: 1 days, Updated: 0 days ago, Maint: 1", 1).
 2. Run: python train_model.py
 3. Run: python check_npm.py
 """

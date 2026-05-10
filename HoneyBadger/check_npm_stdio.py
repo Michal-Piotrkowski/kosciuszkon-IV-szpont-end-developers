@@ -1,16 +1,14 @@
 """
-How to run:
-1. Prepare data.csv (example: "Age: 1 days, Updated: 0 days ago, Maint: 1", 1).
-2. Run: python train_model.py
-3. Run: python check_npm.py
-
-check(): stdout — jedna linia, score P(LABEL_1). Stderr — tekst do modelu + P(LABEL_1)/P(LABEL_0)/label.
+Stdin: JSON metadanych (jak z registry), opcjonalnie z prefiksem logu przed `{`.
+Stdout: jedna linia — score modelu P(LABEL_1) (float 0–1). Bez decyzji ok/nie ok.
+Stderr: tekst wejściowy do modelu + szczegóły prawdopodobieństw (można zlać z 2>&1).
+Bez HTTP — dane z Node.
 """
 
 from datetime import datetime, timezone
+import json
 import sys
 
-import requests
 from transformers import pipeline
 
 MODEL_DIR = "./npm_model"
@@ -36,15 +34,8 @@ def _parse_npm_time(value):
     return datetime.fromisoformat(text)
 
 
-def fetch_npm_metadata(package_name):
-    path = package_name.replace("/", "%2F")
-    url = f"https://registry.npmjs.org/{path}"
-    response = requests.get(url, timeout=30)
-    response.raise_for_status()
-    return response.json()
-
-
 def build_behavior_summary(data):
+    """Ten sam format tekstu co w data.csv / treningu (bez Version)."""
     now = datetime.now(timezone.utc)
     time_info = data.get("time") or {}
     created = _parse_npm_time(time_info.get("created"))
@@ -60,13 +51,21 @@ def build_behavior_summary(data):
     )
 
 
-def check(package_name):
-    data = fetch_npm_metadata(package_name)
+def _parse_stdin_json(raw: str) -> dict:
+    raw = raw.strip()
+    if not raw:
+        raise ValueError("empty stdin")
+    start = raw.find("{")
+    if start == -1:
+        raise ValueError("no JSON object start")
+    return json.loads(raw[start:])
+
+
+def check(data: dict):
     summary = build_behavior_summary(data)
     print(summary, file=sys.stderr)
 
     clf = _get_classifier()
-    # return_all_scores=True without top_k can return only the winning class; top_k=None returns every label.
     scores = clf(summary, return_all_scores=True, top_k=None)
     if scores and isinstance(scores[0], list):
         scores = scores[0]
@@ -86,12 +85,12 @@ def check(package_name):
 
 
 if __name__ == "__main__":
-    # Type the npm package name to check here (e.g. "lodash" or "@types/node"):
-
-    check("lodash")
-
-    check("react-scripts")
-
-    check("browserify-git-my-version")
-
-    check("my-package")
+    try:
+        payload = _parse_stdin_json(sys.stdin.read())
+    except (json.JSONDecodeError, ValueError) as e:
+        print(f"error: invalid stdin ({e})", file=sys.stderr)
+        sys.exit(1)
+    if not isinstance(payload, dict):
+        print("error: JSON root must be an object", file=sys.stderr)
+        sys.exit(1)
+    check(payload)
