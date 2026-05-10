@@ -1,63 +1,75 @@
+import { Logger, Injectable } from '@nestjs/common';
+import * as path from 'path';
+import { spawn } from 'child_process';
+import { EcdsaService } from '../ecdsa/ecdsa.service';
 import {
-  BadRequestException,
-  Logger,
-  Injectable,
-  NotFoundException,
-} from '@nestjs/common';
-import { Request } from 'express';
-import axios from 'axios';
+  PackageMetadata,
+  TarballFileContent,
+} from './interfaces/package-interface';
 
+export type AnalysisResult = string | null;
 @Injectable()
 export class AnalysisService {
   private readonly logger = new Logger(AnalysisService.name);
+  private readonly olamaModelPath = path.join(
+    process.cwd(),
+    'src/analysis/model.py',
+  );
 
-  getCertInfo(request: Request): Promise<any> {
-    const packageName = this.extractPackageName(request.path);
+  private readonly bertModelPath = path.join(
+    process.cwd(),
+    'src/analysis/model.py',
+  );
 
-    if (!packageName) {
-      throw new BadRequestException('Package name is required');
-    }
+  constructor(private ecdsaService: EcdsaService) {}
 
-    this.logger.log(`Fetching npm registry data for ${packageName}`);
-
-    return this.fetchFromNpmRegistry(packageName);
+  analyzePackageMetadata(metadata: PackageMetadata): Promise<AnalysisResult> {
+    return this.runModel(metadata, this.bertModelPath);
   }
 
-  private async fetchFromNpmRegistry(packageName: string): Promise<any> {
-    const normalizedPackageName = encodeURIComponent(packageName);
-    const url = `https://registry.npmjs.org/${normalizedPackageName}`;
-
-    try {
-      const response = await axios.get(url);
-
-      return response.data;
-    } catch (error) {
-      const status = axios.isAxiosError(error)
-        ? error.response?.status
-        : undefined;
-
-      if (status === 404) {
-        throw new NotFoundException(`Package not found: ${packageName}`);
-      }
-
-      if (status === 405) {
-        throw new BadRequestException(`Invalid package path: ${packageName}`);
-      }
-
-      throw error;
-    }
+  analyzePackageTarball(files: TarballFileContent[]): Promise<AnalysisResult> {
+    return this.runModel(
+      {
+        kind: 'tarball',
+        files,
+      },
+      this.olamaModelPath,
+    );
   }
 
-  private extractPackageName(path: string): string {
-    const normalizedPath = path.replace(/^\/+|\/+$/g, '');
+  private runModel(
+    payload: unknown,
+    modelPath: string,
+  ): Promise<AnalysisResult> {
+    return new Promise((resolve, reject) => {
+      const child = spawn('python', [modelPath]);
+      let stdout = '';
 
-    if (!normalizedPath) {
-      return '';
-    }
+      child.stdout?.on('data', (data: Buffer) => {
+        stdout += data.toString();
+      });
 
-    const segments = normalizedPath.split('/');
-    const packageSegment = segments[segments.length - 1] ?? '';
+      child.stderr?.on('data', (data: Buffer) => {
+        this.logger.error(`Model stderr: ${data.toString()}`);
+      });
 
-    return decodeURIComponent(packageSegment.trim());
+      child.on('error', (error) => {
+        this.logger.error(`Spawn error: ${error.message}`);
+        reject(error);
+      });
+
+      child.on('close', (code) => {
+        this.logger.log(`Model process exited with code ${code}`);
+
+        if (code !== 0) {
+          reject(new Error(`Python model exited with code ${code}`));
+          return;
+        }
+
+        resolve(stdout.trim() || null);
+      });
+
+      child.stdin?.end(JSON.stringify(payload));
+    });
   }
 }
