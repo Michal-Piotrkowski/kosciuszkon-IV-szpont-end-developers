@@ -1,15 +1,16 @@
 """
-How to run:
-1. Prepare data.csv (example: "Age: 1 days, Updated: 0 days ago, Maint: 1", 1).
-2. Run: python train_model.py
-3. Run: python check_npm.py
+Fine-tune DistilBERT for binary (or multi-class) text classification on npm package summaries.
+
+Pipeline:
+  1. dataset/enrich_data_csv.py  -> dataset/data_npm.csv (live npm data)
+  2. dataset/merge_data_csv.py   -> dataset/data.csv (npm rows + optional synthetic rows)
+  3. python train_model.py       -> saves weights to ./npm_model
+
+Why: the classifier reads a single string (age, update lag, maintainers, downloads, dependents)
+and outputs label probabilities; train on dataset/data.csv so input format matches inference.
 """
 
-# Put data.csv in the same folder as this script (project root next to train_model.py):
-#   .../HoneyBadger/data.csv
-
-# If you ever need the Hugging Face Hub (gated models, uploads), set a token, e.g.:
-#   HF_TOKEN = "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+# Optional: Hugging Face Hub token for gated models, e.g. HF_TOKEN=hf_...
 
 from datasets import load_dataset
 from transformers import (
@@ -21,7 +22,7 @@ from transformers import (
 )
 
 MODEL_NAME = "distilbert-base-uncased"
-CSV_PATH = "data.csv"
+CSV_PATH = "dataset/data.csv"
 OUTPUT_DIR = "./npm_model"
 
 
