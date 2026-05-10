@@ -1,42 +1,31 @@
-import {
-  All,
-  BadRequestException,
-  Controller,
-  Logger,
-  Req,
-} from '@nestjs/common';
+import { Get, Controller, Req, BadRequestException } from '@nestjs/common';
 import type { Request } from 'express';
 import { AnalysisService } from './analysis.service';
+import { EcdsaService } from '../ecdsa/ecdsa.service';
+import { PackageManagerService } from '../package-manager/package-manager.service';
 
 @Controller()
 export class AnalysisController {
-  private readonly logger = new Logger(AnalysisController.name);
+  constructor(
+    private readonly analysisService: AnalysisService,
+    private readonly ecdsaService: EcdsaService,
+    private readonly packageManagerService: PackageManagerService,
+  ) {}
 
-  constructor(private readonly analysisService: AnalysisService) {}
+  @Get('*')
+  async inspectRequest(@Req() request: Request): Promise<null> {
+    const path = request.path;
+    const isTarball = path.endsWith('.tgz');
 
-  @All('*')
-  async inspectRequest(@Req() request: Request) {
-    const packageName = this.extractPackageName(request.path);
-
-    if (!packageName) {
-      throw new BadRequestException('Package name is required');
+    try {
+      if (isTarball) {
+        await this.packageManagerService.handleTarballRequest(path);
+      } else {
+        await this.packageManagerService.handleMetadataRequest(path);
+      }
+      return null;
+    } catch (error) {
+      throw new BadRequestException(error.message);
     }
-
-    this.logger.log(`Fetching npm registry data for ${packageName}`);
-
-    return this.analysisService.getCertInfo(packageName);
-  }
-
-  private extractPackageName(path: string): string {
-    const normalizedPath = path.replace(/^\/+|\/+$/g, '');
-
-    if (!normalizedPath) {
-      return '';
-    }
-
-    const segments = normalizedPath.split('/');
-    const packageSegment = segments[segments.length - 1] ?? '';
-
-    return decodeURIComponent(packageSegment.trim());
   }
 }

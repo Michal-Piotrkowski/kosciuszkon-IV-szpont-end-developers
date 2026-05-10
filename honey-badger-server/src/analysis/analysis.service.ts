@@ -1,38 +1,75 @@
+import { Logger, Injectable } from '@nestjs/common';
+import * as path from 'path';
+import { spawn } from 'child_process';
+import { EcdsaService } from '../ecdsa/ecdsa.service';
 import {
-  BadRequestException,
-  Injectable,
-  NotFoundException,
-} from '@nestjs/common';
-import axios from 'axios';
+  PackageMetadata,
+  TarballFileContent,
+} from './interfaces/package-interface';
 
+export type AnalysisResult = string | null;
 @Injectable()
 export class AnalysisService {
-  getCertInfo(packageName: string): Promise<any> {
-    return this.fetchFromNpmRegistry(packageName);
+  private readonly logger = new Logger(AnalysisService.name);
+  private readonly olamaModelPath = path.join(
+    process.cwd(),
+    'src/analysis/model.py',
+  );
+
+  private readonly bertModelPath = path.join(
+    process.cwd(),
+    'src/analysis/model.py',
+  );
+
+  constructor(private ecdsaService: EcdsaService) {}
+
+  analyzePackageMetadata(metadata: PackageMetadata): Promise<AnalysisResult> {
+    return this.runModel(metadata, this.bertModelPath);
   }
 
-  private async fetchFromNpmRegistry(packageName: string): Promise<any> {
-    const normalizedPackageName = encodeURIComponent(packageName);
-    const url = `https://registry.npmjs.org/${normalizedPackageName}`;
+  analyzePackageTarball(files: TarballFileContent[]): Promise<AnalysisResult> {
+    return this.runModel(
+      {
+        kind: 'tarball',
+        files,
+      },
+      this.olamaModelPath,
+    );
+  }
 
-    try {
-      const response = await axios.get(url);
+  private runModel(
+    payload: unknown,
+    modelPath: string,
+  ): Promise<AnalysisResult> {
+    return new Promise((resolve, reject) => {
+      const child = spawn('python', [modelPath]);
+      let stdout = '';
 
-      return response.data;
-    } catch (error) {
-      const status = axios.isAxiosError(error)
-        ? error.response?.status
-        : undefined;
+      child.stdout?.on('data', (data: Buffer) => {
+        stdout += data.toString();
+      });
 
-      if (status === 404) {
-        throw new NotFoundException(`Package not found: ${packageName}`);
-      }
+      child.stderr?.on('data', (data: Buffer) => {
+        this.logger.error(`Model stderr: ${data.toString()}`);
+      });
 
-      if (status === 405) {
-        throw new BadRequestException(`Invalid package path: ${packageName}`);
-      }
+      child.on('error', (error) => {
+        this.logger.error(`Spawn error: ${error.message}`);
+        reject(error);
+      });
 
-      throw error;
-    }
+      child.on('close', (code) => {
+        this.logger.log(`Model process exited with code ${code}`);
+
+        if (code !== 0) {
+          reject(new Error(`Python model exited with code ${code}`));
+          return;
+        }
+
+        resolve(stdout.trim() || null);
+      });
+
+      child.stdin?.end(JSON.stringify(payload));
+    });
   }
 }
