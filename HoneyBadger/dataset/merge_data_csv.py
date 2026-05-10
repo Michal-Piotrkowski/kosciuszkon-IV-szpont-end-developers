@@ -2,11 +2,10 @@
 Merge npm-generated rows with optional synthetic rows into one training file.
 
 Reads:
-  - data_npm.csv (from enrich_data_csv.py), or falls back to data.csv if data_npm.csv is missing
-    (legacy: older enrich wrote straight to data.csv).
-  - data_synthetic_suspicious.csv (hand-made or rule-based negative-style examples).
+  - dataset/npm/data_npm.csv (from enrich_data_csv.py), or legacy flat paths if missing.
+  - dataset/synthetic/data_synthetic_suspicious.csv (optional).
 
-Writes dataset/data.csv (npm rows first, then synthetic). train_model.py reads data.csv.
+Writes dataset/train/data.csv (npm rows first, then synthetic). train_model.py reads that file.
 
 Run from repo root:  python dataset/merge_data_csv.py
 """
@@ -15,11 +14,12 @@ import csv
 from pathlib import Path
 
 _DATASET_DIR = Path(__file__).resolve().parent
-NPM_CSV = _DATASET_DIR / "data_npm.csv"
-# Older workflow wrote enrich output directly to data.csv
-LEGACY_NPM_CSV = _DATASET_DIR / "data.csv"
-SYNTHETIC_CSV = _DATASET_DIR / "data_synthetic_suspicious.csv"
-OUTPUT_CSV = _DATASET_DIR / "data.csv"
+NPM_CSV = _DATASET_DIR / "npm" / "data_npm.csv"
+# Pre-folder-layout copies (or older enrich wrote npm rows to dataset/data.csv)
+LEGACY_NPM_FLAT = _DATASET_DIR / "data_npm.csv"
+LEGACY_ENRICH_DATA_CSV = _DATASET_DIR / "data.csv"
+SYNTHETIC_CSV = _DATASET_DIR / "synthetic" / "data_synthetic_suspicious.csv"
+OUTPUT_CSV = _DATASET_DIR / "train" / "data.csv"
 
 
 def _load_rows(path: Path) -> list[dict]:
@@ -44,21 +44,28 @@ def _load_rows(path: Path) -> list[dict]:
 
 def main():
     npm_rows = _load_rows(NPM_CSV)
-    npm_source = NPM_CSV.name
-    if not npm_rows and LEGACY_NPM_CSV.is_file():
-        npm_rows = _load_rows(LEGACY_NPM_CSV)
-        npm_source = LEGACY_NPM_CSV.name
-        leg = LEGACY_NPM_CSV.name
+    npm_source = str(NPM_CSV.relative_to(_DATASET_DIR))
+    if not npm_rows and LEGACY_NPM_FLAT.is_file():
+        npm_rows = _load_rows(LEGACY_NPM_FLAT)
+        npm_source = LEGACY_NPM_FLAT.name
         print(
-            f"Note: {NPM_CSV.name} missing — using {leg} as npm source (legacy enrich). "
-            f"Re-run enrich to produce {NPM_CSV.name}. "
-            f"If {leg} was already merged with synthetic rows, running merge again duplicates rows."
+            f"Note: {NPM_CSV} missing — using legacy {LEGACY_NPM_FLAT.name}. "
+            f"Re-run enrich to populate npm/data_npm.csv."
+        )
+    if not npm_rows and LEGACY_ENRICH_DATA_CSV.is_file():
+        npm_rows = _load_rows(LEGACY_ENRICH_DATA_CSV)
+        npm_source = LEGACY_ENRICH_DATA_CSV.name
+        leg = LEGACY_ENRICH_DATA_CSV.name
+        print(
+            f"Note: npm extract missing — using {leg} as npm source (legacy: enrich wrote here). "
+            f"Re-run enrich to produce npm/data_npm.csv. "
+            f"If {leg} was already merged with synthetic rows, merge again duplicates rows."
         )
 
     if not npm_rows:
         raise SystemExit(
-            f"No npm rows: create {NPM_CSV.name} (python dataset/enrich_data_csv.py) "
-            f"or place rows in {LEGACY_NPM_CSV.name}."
+            f"No npm rows: run python dataset/enrich_data_csv.py "
+            f"or place rows in {NPM_CSV} (or legacy {LEGACY_NPM_FLAT.name} / {LEGACY_ENRICH_DATA_CSV.name})."
         )
 
     synth_rows = _load_rows(SYNTHETIC_CSV)

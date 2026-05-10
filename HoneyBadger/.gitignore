@@ -5,3 +5,7 @@ env/
 
 # Fine-tuned model output
 npm_model/
+
+# Python
+__pycache__/
+*.py[cod]

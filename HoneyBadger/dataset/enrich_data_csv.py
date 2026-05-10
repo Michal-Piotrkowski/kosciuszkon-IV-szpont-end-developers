@@ -1,5 +1,5 @@
 """
-Build dataset/data_npm.csv from data_packages.csv by calling the live npm API.
+Build dataset/npm/data_npm.csv from dataset/source/data_packages.csv via the live npm API.
 
 For each package: registry metadata -> base summary line; search API -> downloads/dependents
 (when the search hit matches the package name). Writes rows (text, label) for later merge.
@@ -23,8 +23,8 @@ from dataset.npm_summary import (  # noqa: E402
     fetch_npm_metadata,
 )
 
-PACKAGES_CSV = _DATASET_DIR / "data_packages.csv"
-OUTPUT_CSV = _DATASET_DIR / "data_npm.csv"
+PACKAGES_CSV = _DATASET_DIR / "source" / "data_packages.csv"
+OUTPUT_CSV = _DATASET_DIR / "npm" / "data_npm.csv"
 DELAY_S = 0.35  # pause between packages to reduce npm rate-limit risk
 
 
