@@ -1,6 +1,8 @@
 import {
   BadRequestException,
+  ForbiddenException,
   Injectable,
+  Logger,
   NotFoundException,
 } from '@nestjs/common';
 import axios from 'axios';
@@ -18,6 +20,7 @@ import { createGunzip } from 'zlib';
 @Injectable()
 export class PackageManagerService {
   private readonly npmRegistryUrl = 'https://registry.npmjs.org';
+  private readonly analysisBlockThreshold = 0.6;
 
   constructor(
     private analysisService: AnalysisService,
@@ -43,10 +46,12 @@ export class PackageManagerService {
       const analysisResult: AnalysisResult =
         await this.analysisService.analyzePackageMetadata(packageMetadata);
 
-      const validation = this.validateAnalysisResult(analysisResult);
+      const confidence = this.parseAnalysisConfidence(analysisResult);
 
-      if (!validation) {
-        return { warning: 'Package may be unsafe based on analysis results' };
+      if (confidence >= this.analysisBlockThreshold) {
+        throw new ForbiddenException(
+          `Package blocked by analysis confidence ${confidence.toFixed(6)} (threshold ${this.analysisBlockThreshold})`,
+        );
       }
 
       const signature = this.ecdsaService.signData(
@@ -54,8 +59,39 @@ export class PackageManagerService {
         JSON.stringify(packageMetadata),
       );
 
+      Logger.log(
+        'Package metadata analysis confidence: ' + confidence.toFixed(6),
+        PackageManagerService.name,
+      );
+
+      const proxyBaseUrl = 'http://localhost:3000';
+      const rewrittenData = response.data as any;
+
+      if (rewrittenData.versions) {
+        for (const versionKey in rewrittenData.versions) {
+          const versionObj = rewrittenData.versions[versionKey];
+          if (versionObj.dist && typeof versionObj.dist.tarball === 'string') {
+            versionObj.dist.tarball = versionObj.dist.tarball.replace(
+              'https://registry.npmjs.org',
+              proxyBaseUrl,
+            );
+          }
+        }
+      }
+
+      if (rewrittenData.versions) {
+        const firstVersionKey = Object.keys(rewrittenData.versions)[0];
+        if (firstVersionKey) {
+          const sampleTarball =
+            rewrittenData.versions[firstVersionKey].dist?.tarball;
+          Logger.log(
+            `[URL DEBUG] Sending NPM tarball link: ${sampleTarball}`,
+            'PackageManagerService',
+          );
+        }
+      }
       return {
-        ...response.data,
+        ...rewrittenData,
         signature,
       };
     } catch (error) {
@@ -75,7 +111,7 @@ export class PackageManagerService {
     }
   }
 
-  async handleTarballRequest(packageName: string): Promise<unknown> {
+  async handleTarballRequest(packageName: string): Promise<Readable> {
     const url = `${this.npmRegistryUrl}${packageName}`;
 
     try {
@@ -106,7 +142,7 @@ export class PackageManagerService {
 
           stream.on('end', () => {
             files.push({
-              fileName: header.name,
+              name: header.name,
               content: Buffer.concat(chunks).toString('utf8'),
             });
             next();
@@ -122,9 +158,12 @@ export class PackageManagerService {
 
       await this.analysisService.analyzePackageTarball(files);
 
-      return {
-        processedFiles: files.length,
-      };
+      // Return a new stream from the original URL since we've already consumed the previous one
+      const tarballResponse = await axios.get<Readable>(url, {
+        responseType: 'stream',
+      });
+
+      return tarballResponse.data;
     } catch (error) {
       const status = axios.isAxiosError(error)
         ? error.response?.status
@@ -142,11 +181,17 @@ export class PackageManagerService {
     }
   }
 
-  private validateAnalysisResult(result: AnalysisResult): boolean {
-    if (typeof result !== 'string' && result !== null) {
+  private parseAnalysisConfidence(result: AnalysisResult): number {
+    if (typeof result !== 'string' || result.trim() === '') {
       throw new BadRequestException('Invalid analysis result format');
-    } else {
-      return result === '1';
     }
+
+    const confidence = Number(result);
+
+    if (Number.isNaN(confidence) || !Number.isFinite(confidence)) {
+      throw new BadRequestException('Invalid analysis confidence value');
+    }
+
+    return confidence;
   }
 }

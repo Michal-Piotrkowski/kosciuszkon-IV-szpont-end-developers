@@ -1,0 +1,645 @@
+[2026-05-10 08:28:06] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:06] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:06] [OLLAMA-DEBUG] Wczytano 8032 znaków ze standardowego wejścia.
+[2026-05-10 08:28:06] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:06] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 8
+[2026-05-10 08:28:06] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 5
+[2026-05-10 08:28:06] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 5: package/cli.js ---
+[2026-05-10 08:28:06] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/cli.js (rozmiar kodu: 440 znaków)
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] Wczytano 104282 znaków ze standardowego wejścia.
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 17
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 15
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 15: package/lib/encoding.js ---
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/lib/encoding.js (rozmiar kodu: 327 znaków)
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] Wczytano 155309 znaków ze standardowego wejścia.
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 19
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 17
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 17: package/browser.js ---
+[2026-05-10 08:28:07] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/browser.js (rozmiar kodu: 175 znaków)
+[2026-05-10 08:28:11] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:11] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:11] [OLLAMA-DEBUG] Wczytano 15131 znaków ze standardowego wejścia.
+[2026-05-10 08:28:11] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:11] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 6
+[2026-05-10 08:28:11] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 2
+[2026-05-10 08:28:11] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 2: package/lib/whatwg-encoding.js ---
+[2026-05-10 08:28:11] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/lib/whatwg-encoding.js (rozmiar kodu: 1464 znaków)
+[2026-05-10 08:28:12] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:12] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:12] [OLLAMA-DEBUG] Wczytano 1488421 znaków ze standardowego wejścia.
+[2026-05-10 08:28:12] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:12] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 106
+[2026-05-10 08:28:12] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 61
+[2026-05-10 08:28:12] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 61: package/dist/config.cjs ---
+[2026-05-10 08:28:12] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/dist/config.cjs (rozmiar kodu: 3073 znaków)
+[2026-05-10 08:28:17] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:17] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:17] [OLLAMA-DEBUG] Wczytano 240647 znaków ze standardowego wejścia.
+[2026-05-10 08:28:17] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:17] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 37
+[2026-05-10 08:28:17] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 22
+[2026-05-10 08:28:17] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 22: package/dist/chunk-browser.cjs ---
+[2026-05-10 08:28:17] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/dist/chunk-browser.cjs (rozmiar kodu: 2095 znaków)
+[2026-05-10 08:28:24] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:24] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:24] [OLLAMA-DEBUG] Wczytano 16288 znaków ze standardowego wejścia.
+[2026-05-10 08:28:24] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:24] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 8
+[2026-05-10 08:28:24] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 5
+[2026-05-10 08:28:24] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 5: package/check-npm-version.js ---
+[2026-05-10 08:28:24] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/check-npm-version.js (rozmiar kodu: 358 znaków)
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] Wczytano 2785122 znaków ze standardowego wejścia.
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] Wczytano 9007 znaków ze standardowego wejścia.
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 9
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 4
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 4: package/dist/browser.js ---
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/dist/browser.js (rozmiar kodu: 237 znaków)
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 35
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 18
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 18: package/index.cjs ---
+[2026-05-10 08:28:25] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/index.cjs (rozmiar kodu: 2184 znaków)
+[2026-05-10 08:28:26] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:26] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:26] [OLLAMA-DEBUG] Wczytano 236855 znaków ze standardowego wejścia.
+[2026-05-10 08:28:26] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:26] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 41
+[2026-05-10 08:28:26] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 20
+[2026-05-10 08:28:26] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 20: package/dist/cookie/canonicalDomain.js ---
+[2026-05-10 08:28:26] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/dist/cookie/canonicalDomain.js (rozmiar kodu: 763 znaków)
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] Wczytano 48333 znaków ze standardowego wejścia.
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 14
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 8
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 8: package/dist/common-Qw-RoVFD.js ---
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/dist/common-Qw-RoVFD.js (rozmiar kodu: 1042 znaków)
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] Wczytano 48749 znaków ze standardowego wejścia.
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 7
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 3
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 3: package/dist/main.cjs ---
+[2026-05-10 08:28:27] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/dist/main.cjs (rozmiar kodu: 15195 znaków)
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] Wczytano 71220 znaków ze standardowego wejścia.
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 6
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 3
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 3: package/bin/semver.js ---
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/bin/semver.js (rozmiar kodu: 4538 znaków)
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] --- START SKRYPTU ---
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] Wczytano 114915 znaków ze standardowego wejścia.
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 29
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 27
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 27: package/lib/clone.js ---
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/lib/clone.js (rozmiar kodu: 1896 znaków)
+[2026-05-10 08:28:28] [OLLAMA-DEBUG] Wczytano 24283578 znaków ze standardowego wejścia.
+[2026-05-10 08:28:29] [OLLAMA-DEBUG] Pomyślnie zdekodowano JSON. Znalezione klucze: ['kind', 'files']
+[2026-05-10 08:28:29] [OLLAMA-DEBUG] Rozpoznano typ 'tarball'. Otrzymano łącznie plików: 132
+[2026-05-10 08:28:29] [OLLAMA-DEBUG] Po filtracji rozszerzeń (JS/TS/JSON) zostało plików do analizy: 10
+[2026-05-10 08:28:29] [OLLAMA-DEBUG] --- Przetwarzam plik 1 z 10: package/lib/_tsc.js ---
+[2026-05-10 08:28:29] [OLLAMA-DEBUG] Plik package/lib/_tsc.js przekracza 50000 znaków. Przycinam.
+[2026-05-10 08:28:29] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/lib/_tsc.js (rozmiar kodu: 47443 znaków)
+[2026-05-10 08:30:43] [OLLAMA-DEBUG] Ollama odpowiedziała dla pliku: package/cli.js
+[2026-05-10 08:30:43] [OLLAMA-DEBUG] --- Przetwarzam plik 2 z 5: package/example.js ---
+[2026-05-10 08:30:43] [OLLAMA-DEBUG] Wysyłam do Ollamy plik: package/example.js (rozmiar kodu: 240 znaków)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 7054 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 4
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 2 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/2: package/package.json
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Extracted 'scripts' section from package/package.json
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Sending to Ollama: package/package.json (code size: 17 chars)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 24156 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 5
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 2 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/2: package/dist/index.js
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Sending to Ollama: package/dist/index.js (code size: 5543 chars)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 9598 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 4
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 2 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/2: package/package.json
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Extracted 'scripts' section from package/package.json
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Sending to Ollama: package/package.json (code size: 17 chars)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 49409 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 7
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 3 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/3: package/dist/index.js
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Sending to Ollama: package/dist/index.js (code size: 13803 chars)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 63209 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 4
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 2 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/2: package/dist/index.js
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] File package/dist/index.js exceeds 50000 chars. Truncating
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Sending to Ollama: package/dist/index.js (code size: 45558 chars)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 136392 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 101791 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 13
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 4 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 13
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/4: package/dist/chunk-hooks.js
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 4 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] File package/dist/chunk-hooks.js exceeds 50000 chars. Truncating
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/4: package/dist/environment.js
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Sending to Ollama: package/dist/chunk-hooks.js (code size: 41579 chars)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Sending to Ollama: package/dist/environment.js (code size: 1097 chars)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 179787 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 23
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 12 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/12: package/dist/auto-register.js
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Sending to Ollama: package/dist/auto-register.js (code size: 340 chars)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 185700 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 19
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 74642 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 7 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/7: package/dist/chunk-_commonjsHelpers.js
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 19
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Sending to Ollama: package/dist/chunk-_commonjsHelpers.js (code size: 4081 chars)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 9 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/9: package/lib/builder.js
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Sending to Ollama: package/lib/builder.js (code size: 2429 chars)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 350229 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 25
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 16 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/16: package/dist/act-compat.js
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Sending to Ollama: package/dist/act-compat.js (code size: 2901 chars)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 105035 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 5
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 2 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/2: package/dist/index.js
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] File package/dist/index.js exceeds 50000 chars. Truncating
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Sending to Ollama: package/dist/index.js (code size: 45116 chars)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 470931 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 308
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 204 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/204: package/dist/cjs/setup/api.js
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Sending to Ollama: package/dist/cjs/setup/api.js (code size: 1088 chars)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 2523134 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 51
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 33 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/33: package/dist/queries/all-utils.js
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Sending to Ollama: package/dist/queries/all-utils.js (code size: 1462 chars)
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Read 37041363 characters from stdin
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 3
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 1 files to analyze
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Processing file 1/1: package/package.json
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] No 'scripts' section in package/package.json. Skipping
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] Finished SUCCESS. No vulnerabilities
+[2026-05-10 08:50:48] [OLLAMA-DEBUG] --- SCRIPT FINISHED ---
+[2026-05-10 08:50:50] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:50:50] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:50:50] [OLLAMA-DEBUG] Read 275272 characters from stdin
+[2026-05-10 08:50:50] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:50:50] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 249
+[2026-05-10 08:50:50] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 247 files to analyze
+[2026-05-10 08:50:50] [OLLAMA-DEBUG] Processing file 1/247: package/helpers/AwaitValue.js
+[2026-05-10 08:50:50] [OLLAMA-DEBUG] Sending to Ollama: package/helpers/AwaitValue.js (code size: 155 chars)
+[2026-05-10 08:51:19] [OLLAMA-DEBUG] Ollama responded for file: package/package.json
+[2026-05-10 08:51:19] [OLLAMA-DEBUG] Processing file 2/2: package/index.js
+[2026-05-10 08:51:19] [OLLAMA-DEBUG] Sending to Ollama: package/index.js (code size: 398 chars)
+[2026-05-10 08:51:26] [OLLAMA-DEBUG] Ollama responded for file: package/package.json
+[2026-05-10 08:51:26] [OLLAMA-DEBUG] Processing file 2/2: package/index.js
+[2026-05-10 08:51:26] [OLLAMA-DEBUG] Sending to Ollama: package/index.js (code size: 339 chars)
+[2026-05-10 08:53:42] [OLLAMA-DEBUG] Ollama responded for file: package/dist/index.js
+[2026-05-10 08:53:42] [OLLAMA-DEBUG] Processing file 2/2: package/package.json
+[2026-05-10 08:53:42] [OLLAMA-DEBUG] Extracted 'scripts' section from package/package.json
+[2026-05-10 08:53:42] [OLLAMA-DEBUG] Sending to Ollama: package/package.json (code size: 65 chars)
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Read 9007 characters from stdin
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 9
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 4 files to analyze
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Processing file 1/4: package/dist/browser.js
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Sending to Ollama: package/dist/browser.js (code size: 237 chars)
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Read 48333 characters from stdin
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 14
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 8 files to analyze
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Processing file 1/8: package/dist/common-Qw-RoVFD.js
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Sending to Ollama: package/dist/common-Qw-RoVFD.js (code size: 1042 chars)
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Read 155309 characters from stdin
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Read 8032 characters from stdin
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 8
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 5 files to analyze
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 19
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 17 files to analyze
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Processing file 1/5: package/cli.js
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Processing file 1/17: package/browser.js
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Sending to Ollama: package/cli.js (code size: 440 chars)
+[2026-05-10 08:55:50] [OLLAMA-DEBUG] Sending to Ollama: package/browser.js (code size: 175 chars)
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Read 240647 characters from stdin
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 37
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 22 files to analyze
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Processing file 1/22: package/dist/chunk-browser.cjs
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Sending to Ollama: package/dist/chunk-browser.cjs (code size: 2095 chars)
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Read 15131 characters from stdin
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 6
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 2 files to analyze
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Processing file 1/2: package/lib/whatwg-encoding.js
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Sending to Ollama: package/lib/whatwg-encoding.js (code size: 1464 chars)
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Read 16288 characters from stdin
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 8
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 5 files to analyze
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Processing file 1/5: package/check-npm-version.js
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Sending to Ollama: package/check-npm-version.js (code size: 358 chars)
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Read 839525 characters from stdin
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 119
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 62 files to analyze
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Processing file 1/62: package/lib/config/cache-contexts.js
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Sending to Ollama: package/lib/config/cache-contexts.js (code size: 22 chars)
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Read 104282 characters from stdin
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 17
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 15 files to analyze
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Processing file 1/15: package/lib/encoding.js
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Sending to Ollama: package/lib/encoding.js (code size: 327 chars)
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Read 236855 characters from stdin
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 41
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 20 files to analyze
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Processing file 1/20: package/dist/cookie/canonicalDomain.js
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Sending to Ollama: package/dist/cookie/canonicalDomain.js (code size: 763 chars)
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Read 2785122 characters from stdin
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 35
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 18 files to analyze
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Processing file 1/18: package/index.cjs
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Sending to Ollama: package/index.cjs (code size: 2184 chars)
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Read 561338 characters from stdin
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 45
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 22 files to analyze
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Processing file 1/22: package/lib/buffer.js
+[2026-05-10 08:55:51] [OLLAMA-DEBUG] Sending to Ollama: package/lib/buffer.js (code size: 6271 chars)
+[2026-05-10 08:55:52] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:52] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:52] [OLLAMA-DEBUG] Read 1488421 characters from stdin
+[2026-05-10 08:55:52] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:52] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 106
+[2026-05-10 08:55:52] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 61 files to analyze
+[2026-05-10 08:55:52] [OLLAMA-DEBUG] Processing file 1/61: package/dist/config.cjs
+[2026-05-10 08:55:52] [OLLAMA-DEBUG] Sending to Ollama: package/dist/config.cjs (code size: 3073 chars)
+[2026-05-10 08:55:52] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:52] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] Read 24283578 characters from stdin
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] Read 48749 characters from stdin
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 7
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 3 files to analyze
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] Processing file 1/3: package/dist/main.cjs
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] Sending to Ollama: package/dist/main.cjs (code size: 15195 chars)
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 132
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 10 files to analyze
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] Processing file 1/10: package/lib/_tsc.js
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] File package/lib/_tsc.js exceeds 50000 chars. Truncating
+[2026-05-10 08:55:53] [OLLAMA-DEBUG] Sending to Ollama: package/lib/_tsc.js (code size: 47443 chars)
+[2026-05-10 09:45:31] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:31] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:31] [OLLAMA-DEBUG] Read 24156 characters from stdin
+[2026-05-10 09:45:31] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:31] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 5
+[2026-05-10 09:45:31] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 2 files to analyze
+[2026-05-10 09:45:31] [OLLAMA-DEBUG] Processing file 1/2: package/dist/index.js
+[2026-05-10 09:45:31] [OLLAMA-DEBUG] Sending to Ollama: package/dist/index.js (code size: 5543 chars)
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Read 105035 characters from stdin
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 5
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 2 files to analyze
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Processing file 1/2: package/dist/index.js
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] File package/dist/index.js exceeds 50000 chars. Truncating
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Sending to Ollama: package/dist/index.js (code size: 45116 chars)
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Read 74642 characters from stdin
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 19
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 9 files to analyze
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Processing file 1/9: package/lib/builder.js
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Sending to Ollama: package/lib/builder.js (code size: 2429 chars)
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Read 101791 characters from stdin
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 13
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 4 files to analyze
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Processing file 1/4: package/dist/environment.js
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Sending to Ollama: package/dist/environment.js (code size: 1097 chars)
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Read 49409 characters from stdin
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 7
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 3 files to analyze
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Processing file 1/3: package/dist/index.js
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Sending to Ollama: package/dist/index.js (code size: 13803 chars)
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Read 63209 characters from stdin
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 4
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 2 files to analyze
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Processing file 1/2: package/dist/index.js
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] File package/dist/index.js exceeds 50000 chars. Truncating
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Sending to Ollama: package/dist/index.js (code size: 45558 chars)
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Read 179787 characters from stdin
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 23
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 12 files to analyze
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Processing file 1/12: package/dist/auto-register.js
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Read 275272 characters from stdin
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Sending to Ollama: package/dist/auto-register.js (code size: 340 chars)
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 249
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 247 files to analyze
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Processing file 1/247: package/helpers/AwaitValue.js
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Sending to Ollama: package/helpers/AwaitValue.js (code size: 155 chars)
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Read 136392 characters from stdin
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 13
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 4 files to analyze
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Processing file 1/4: package/dist/chunk-hooks.js
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] File package/dist/chunk-hooks.js exceeds 50000 chars. Truncating
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Sending to Ollama: package/dist/chunk-hooks.js (code size: 41579 chars)
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Read 155309 characters from stdin
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 19
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 17 files to analyze
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Processing file 1/17: package/browser.js
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Sending to Ollama: package/browser.js (code size: 175 chars)
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 25
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 16 files to analyze
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Processing file 1/16: package/dist/act-compat.js
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Sending to Ollama: package/dist/act-compat.js (code size: 2901 chars)
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Read 185700 characters from stdin
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 19
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 7 files to analyze
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Read 470931 characters from stdin
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Processing file 1/7: package/dist/chunk-_commonjsHelpers.js
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Sending to Ollama: package/dist/chunk-_commonjsHelpers.js (code size: 4081 chars)
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 308
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 204 files to analyze
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Processing file 1/204: package/dist/cjs/setup/api.js
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Sending to Ollama: package/dist/cjs/setup/api.js (code size: 1088 chars)
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Read 839525 characters from stdin
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 119
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 62 files to analyze
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Processing file 1/62: package/lib/config/cache-contexts.js
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Sending to Ollama: package/lib/config/cache-contexts.js (code size: 22 chars)
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Read 2523134 characters from stdin
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 51
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 33 files to analyze
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Processing file 1/33: package/dist/queries/all-utils.js
+[2026-05-10 09:45:32] [OLLAMA-DEBUG] Sending to Ollama: package/dist/queries/all-utils.js (code size: 1462 chars)
+[2026-05-10 09:47:35] [OLLAMA-DEBUG] Ollama responded for file: package/dist/index.js
+[2026-05-10 09:47:35] [OLLAMA-DEBUG] Processing file 2/2: package/package.json
+[2026-05-10 09:47:35] [OLLAMA-DEBUG] Extracted 'scripts' section from package/package.json
+[2026-05-10 09:47:35] [OLLAMA-DEBUG] Sending to Ollama: package/package.json (code size: 65 chars)
+[2026-05-10 09:48:22] [OLLAMA-DEBUG] Ollama responded for file: package/lib/builder.js
+[2026-05-10 09:48:22] [OLLAMA-DEBUG] Processing file 2/9: package/lib/formatters.js
+[2026-05-10 09:48:22] [OLLAMA-DEBUG] Sending to Ollama: package/lib/formatters.js (code size: 1500 chars)
+[2026-05-10 09:48:43] [OLLAMA-DEBUG] Ollama responded for file: package/dist/environment.js
+[2026-05-10 09:48:43] [OLLAMA-DEBUG] Processing file 2/4: package/dist/index.js
+[2026-05-10 09:48:43] [OLLAMA-DEBUG] File package/dist/index.js exceeds 50000 chars. Truncating
+[2026-05-10 09:48:43] [OLLAMA-DEBUG] Sending to Ollama: package/dist/index.js (code size: 42375 chars)
+[2026-05-10 09:51:54] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:54] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:54] [OLLAMA-DEBUG] Read 7054 characters from stdin
+[2026-05-10 09:51:54] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:51:54] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 4
+[2026-05-10 09:51:54] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 2 files to analyze
+[2026-05-10 09:51:54] [OLLAMA-DEBUG] Processing file 1/2: package/package.json
+[2026-05-10 09:51:54] [OLLAMA-DEBUG] Extracted 'scripts' section from package/package.json
+[2026-05-10 09:51:54] [OLLAMA-DEBUG] Sending to Ollama: package/package.json (code size: 17 chars)
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Read 8032 characters from stdin
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 8
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 5 files to analyze
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Processing file 1/5: package/cli.js
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Sending to Ollama: package/cli.js (code size: 440 chars)
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Read 9007 characters from stdin
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 9
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 4 files to analyze
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Processing file 1/4: package/dist/browser.js
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Sending to Ollama: package/dist/browser.js (code size: 237 chars)
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Read 71220 characters from stdin
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 6
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 3 files to analyze
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Processing file 1/3: package/bin/semver.js
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Sending to Ollama: package/bin/semver.js (code size: 4538 chars)
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Read 16288 characters from stdin
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Read 104282 characters from stdin
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 8
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+analyze
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 17
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Sending to Ollama: package/check-npm-version.js (code size: 358 chars)
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 15 files to analyze
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Processing file 1/15: package/lib/encoding.js
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Sending to Ollama: package/lib/encoding.js (code size: 327 chars)
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Read 236855 characters from stdin
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 41
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 20 files to analyze
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Processing file 1/20: package/dist/cookie/canonicalDomain.js
+[2026-05-10 09:51:55] [OLLAMA-DEBUG] Sending to Ollama: package/dist/cookie/canonicalDomain.js (code size: 763 chars)
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Read 9598 characters from stdin
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 4
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 2 files to analyze
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Processing file 1/2: package/package.json
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Extracted 'scripts' section from package/package.json
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Sending to Ollama: package/package.json (code size: 17 chars)
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Read 15131 characters from stdin
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 6
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 2 files to analyze
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Processing file 1/2: package/lib/whatwg-encoding.js
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Sending to Ollama: package/lib/whatwg-encoding.js (code size: 1464 chars)
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Read 48333 characters from stdin
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 14
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 8 files to analyze
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Processing file 1/8: package/dist/common-Qw-RoVFD.js
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Sending to Ollama: package/dist/common-Qw-RoVFD.js (code size: 1042 chars)
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Read 155309 characters from stdin
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 19
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 17 files to analyze
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Processing file 1/17: package/browser.js
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Sending to Ollama: package/browser.js (code size: 175 chars)
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Read 240647 characters from stdin
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 37
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 22 files to analyze
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Processing file 1/22: package/dist/chunk-browser.cjs
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Sending to Ollama: package/dist/chunk-browser.cjs (code size: 2095 chars)
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Read 1488421 characters from stdin
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 106
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 61 files to analyze
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Processing file 1/61: package/dist/config.cjs
+[2026-05-10 09:51:56] [OLLAMA-DEBUG] Sending to Ollama: package/dist/config.cjs (code size: 3073 chars)
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] Read 2785122 characters from stdin
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 35
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 18 files to analyze
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] Processing file 1/18: package/index.cjs
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] Sending to Ollama: package/index.cjs (code size: 2184 chars)
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] --- SCRIPT START ---
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] Host: http://127.0.0.1:11434, Model: llama3:latest
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] Read 24283578 characters from stdin
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] JSON decoded successfully. Keys: ['kind', 'files']
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] Recognized type 'tarball'. Total files received: 132
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] After filtering extensions (JS/TS/JSON): 10 files to analyze
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] Processing file 1/10: package/lib/_tsc.js
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] File package/lib/_tsc.js exceeds 50000 chars. Truncating
+[2026-05-10 09:51:57] [OLLAMA-DEBUG] Sending to Ollama: package/lib/_tsc.js (code size: 47443 chars)

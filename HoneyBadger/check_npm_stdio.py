@@ -7,13 +7,19 @@ Bez HTTP — dane z Node.
 
 from datetime import datetime, timezone
 import json
+import os
 import sys
 
-from transformers import pipeline
+os.environ.setdefault("HF_HUB_DISABLE_PROGRESS_BARS", "1")
 
-MODEL_DIR = "./npm_model"
+from transformers import pipeline, logging as hf_logging
+
+# Use absolute path so it works regardless of working directory
+MODEL_DIR = os.path.join(os.path.dirname(__file__), "npm_model")
 
 _classifier = None
+
+hf_logging.set_verbosity_error()
 
 
 def _get_classifier():
@@ -63,7 +69,6 @@ def _parse_stdin_json(raw: str) -> dict:
 
 def check(data: dict):
     summary = build_behavior_summary(data)
-    print(summary, file=sys.stderr)
 
     clf = _get_classifier()
     scores = clf(summary, return_all_scores=True, top_k=None)
@@ -74,10 +79,6 @@ def check(data: dict):
     pred_label = predicted.get("label", "")
     risk_p = by_label.get("LABEL_1", 0.0)
     safe_p = by_label.get("LABEL_0", 0.0)
-    print(
-        f"P(LABEL_1): {risk_p:.6f} | P(LABEL_0): {safe_p:.6f} | label: {pred_label}",
-        file=sys.stderr,
-    )
 
     print(risk_p)
     sys.stdout.flush()

@@ -21,7 +21,7 @@ export class EcdsaService {
 
   signData(packageName: string, data: string): string {
     const { privateKey } = this.generateKeyPair();
-    const sign = crypto.sign('sha256', Buffer.from(`${packageName}:${data}`), {
+    const sign = crypto.sign(null, Buffer.from(`${packageName}:${data}`), {
       key: privateKey,
     });
 

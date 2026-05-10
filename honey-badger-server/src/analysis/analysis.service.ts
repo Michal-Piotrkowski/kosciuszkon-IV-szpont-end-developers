@@ -11,14 +11,15 @@ export type AnalysisResult = string | null;
 @Injectable()
 export class AnalysisService {
   private readonly logger = new Logger(AnalysisService.name);
+  private readonly pythonExecutable = process.env.PYTHON_EXECUTABLE ?? 'python';
   private readonly olamaModelPath = path.join(
     process.cwd(),
-    'src/analysis/model.py',
+    'src/analysis/olama_code_analysis.py',
   );
 
   private readonly bertModelPath = path.join(
     process.cwd(),
-    'src/analysis/model.py',
+    '../HoneyBadger/check_npm_stdio.py',
   );
 
   constructor(private ecdsaService: EcdsaService) {}
@@ -42,15 +43,26 @@ export class AnalysisService {
     modelPath: string,
   ): Promise<AnalysisResult> {
     return new Promise((resolve, reject) => {
-      const child = spawn('python', [modelPath]);
+      const child = spawn(this.pythonExecutable, [modelPath], {
+        env: {
+          ...process.env,
+          OLLAMA_HOST: process.env.OLLAMA_HOST ?? 'http://127.0.0.1:11434',
+          OLLAMA_MODEL: process.env.OLLAMA_MODEL ?? 'llama3:latest',
+        },
+      });
       let stdout = '';
+      let stderr = '';
+
+      this.logger.log(
+        `Running model script: ${path.basename(modelPath)} using ${this.pythonExecutable}`,
+      );
 
       child.stdout?.on('data', (data: Buffer) => {
         stdout += data.toString();
       });
 
       child.stderr?.on('data', (data: Buffer) => {
-        this.logger.error(`Model stderr: ${data.toString()}`);
+        stderr += data.toString();
       });
 
       child.on('error', (error) => {
@@ -62,11 +74,25 @@ export class AnalysisService {
         this.logger.log(`Model process exited with code ${code}`);
 
         if (code !== 0) {
+          if (stderr.trim()) {
+            this.logger.error(`Model stderr: ${stderr.trim()}`);
+          }
           reject(new Error(`Python model exited with code ${code}`));
           return;
         }
 
-        resolve(stdout.trim() || null);
+        const output = stdout.trim();
+        if (output) {
+          this.logger.log(`Model stdout: ${output}`);
+        } else {
+          this.logger.warn('Model stdout was empty');
+        }
+
+        if (stderr.trim()) {
+          this.logger.verbose(`Model stderr: ${stderr.trim()}`);
+        }
+
+        resolve(output || null);
       });
 
       child.stdin?.end(JSON.stringify(payload));

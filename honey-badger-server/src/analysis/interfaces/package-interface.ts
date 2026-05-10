@@ -11,6 +11,6 @@ export interface NpmRegistryPackageMetadata {
 }
 
 export interface TarballFileContent {
-  fileName: string;
+  name: string;
   content: string;
 }
