@@ -1,13 +1,10 @@
 """
 Fine-tune DistilBERT for binary (or multi-class) text classification on npm package summaries.
 
-Pipeline:
-  1. dataset/enrich_data_csv.py  -> dataset/npm/data_npm.csv (live npm data)
-  2. dataset/merge_data_csv.py   -> dataset/train/data.csv (npm + optional synthetic)
-  3. python train_model.py       -> saves weights to ./npm_model
+Expects dataset/data.csv with columns text, label (same string shape as stdio/check_npm_stdio.py:
+age, update lag, maint count, downloads, dependents).
 
-Why: the classifier reads a single string (age, update lag, maintainers, downloads, dependents)
-and outputs label probabilities; train on dataset/train/data.csv so input format matches inference.
+Run from HoneyBadger root:  python train_model.py  -> ./npm_model
 """
 
 # Optional: Hugging Face Hub token for gated models, e.g. HF_TOKEN=hf_...
@@ -22,7 +19,7 @@ from transformers import (
 )
 
 MODEL_NAME = "distilbert-base-uncased"
-CSV_PATH = "dataset/train/data.csv"
+CSV_PATH = "dataset/data.csv"
 OUTPUT_DIR = "./npm_model"
 
 
